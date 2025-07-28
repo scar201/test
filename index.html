@@ -671,7 +671,24 @@
             group.addEventListener('mouseenter', function() {
                 this.style.borderRightColor = '#1a2424';
             });
-            
+
+            }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <!-- Access Control Overlay -->
+        <div class="access-overlay" id="accessOverlay">
+            <div class="access-box">
+                <h2>🔐 دخول محدود</h2>
+                <p style="color: #DAA520; margin-bottom: 20px;">يرجى إدخال كلمة المرور للوصول للمتجر</p>
+                <input type="password" id="passwordInput" class="access-input" placeholder="كلمة المرور">
+                <br>
+                <button onclick="checkAccess()" class="access-btn">دخول</button>
+                <p id="errorMsg" style="color: red; margin-top: 10px; display: none;">كلمة مرور خاطئة!</p>
+            </div>
+        </div>
+        
             group.addEventListener('mouseleave', function() {
                 this.style.borderRightColor = '#202c2c';
             });
